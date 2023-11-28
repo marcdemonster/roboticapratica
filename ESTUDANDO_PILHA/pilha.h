@@ -11,7 +11,7 @@ class pilha{
     ~pilha();//destrutora da pilha//
     bool estacheia();//verifica se a pilha esta cheia//
     bool estavazia();//verifica se a pilha esta vazia//
-    void inserir(TipoItem);
+    void inserir(TipoItem item);
     TipoItem remover();
     void imprimir();//print
     int qualtamanho();//lenght

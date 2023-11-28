@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-    pilha pilah1;
+    pilha pilha1;
     TipoItem item;
     int opcao;
     cout << "Programa gerador de pilha:\n";
@@ -14,7 +14,7 @@ int main(){
         cout << "Digite 1 para inserir um elemento!\n";
         cout << "Digite 2 para remover um elemento!\n";
         cout << "Digite 3 para imprimir a pilha!\n";
-        cin << opcao;
+        cin >> opcao;
         if(opcao == 1){
             cout << "Digite o elemento a ser inserido:\n";
             cin >> item;

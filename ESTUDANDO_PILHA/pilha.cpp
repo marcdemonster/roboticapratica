@@ -21,7 +21,7 @@ using namespace std;
     {
         return (tamanho == 0);
     }
-    void pilha::inserir(TipoItem)
+    void pilha::inserir(TipoItem item)
     {
         if (estacheia()){
             cout << "A pilha esta cheia!\n";

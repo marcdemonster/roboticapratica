@@ -37,8 +37,9 @@ using namespace std;
             cout << "Nao tem elemento para ser removido!\n";
             return 0;
         }else{
-            return estrutura[tamanho-1];
-            tamanho --;
+            tamanho--;
+            return estrutura[tamanho];
+            
         }
     }
     void pilha::imprimir()//print

@@ -9,9 +9,20 @@ using namespace std;
         raiz = NULL;
     }
     ArvoreBinariadeBusca::~ArvoreBinariadeBusca() //destrutor
-    {}
+    {
+        deletarArvore(raiz);
+
+    }
     void ArvoreBinariadeBusca::deletarArvore(No* Noatual)
-    {}
+    {
+        if(Noatual != NULL){
+            deletarArvore(Noatual->filhoesquerda);
+
+            deletarArvore(Noatual->filhodireita);
+
+            delete Noatual;
+        }
+    }
     No* ArvoreBinariadeBusca::obterRaiz()
     {
         return raiz;
@@ -119,8 +130,35 @@ using namespace std;
         }
     }
     void ArvoreBinariadeBusca::imprimirpreordem(No* Noatual)
-    {}
+    {
+        if(Noatual != NULL){
+            cout << Noatual->aluno.obterNome() << ": ";
+            cout << Noatual->aluno.obterRa() << endl;
+
+            imprimirpreordem(Noatual->filhoesquerda);
+
+            imprimirpreordem(Noatual->filhodireita);
+        }
+    }
     void ArvoreBinariadeBusca::imprimiremordem(No* Noatual)
-    {}
+    {
+        if(Noatual != NULL){
+            imprimiremordem(Noatual->filhoesquerda);
+
+            cout << Noatual->aluno.obterNome() << ": ";
+            cout << Noatual->aluno.obterRa()<< endl;
+
+            imprimiremordem(Noatual->filhodireita);
+        }
+    }
     void ArvoreBinariadeBusca::imprimirposordem(No* Noatual)
-    {}
+    {
+        if(Noatual != NULL){
+            imprimirposordem(Noatual->filhoesquerda);
+
+            imprimirposordem(Noatual->filhodireita);
+
+            cout << Noatual->aluno.obterNome() << ": ";
+            cout << Noatual->aluno.obterRa() << endl;
+        }
+    }

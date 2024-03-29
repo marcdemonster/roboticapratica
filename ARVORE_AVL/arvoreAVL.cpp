@@ -183,7 +183,7 @@ using namespace std;
         novopai->filhodireita=pai;
         pai = novopai;
     }
-    void ArvoreAVL::rotacaoequerda(No*& pai)
+    void ArvoreAVL::rotacaoesquerda(No*& pai)
     {
         No* novopai = pai->filhodireita;
         pai->filhoesquerda = novopai->filhoesquerda;
@@ -192,7 +192,7 @@ using namespace std;
     }
     void ArvoreAVL::rotacaoesquerdadireita(No*& pai)
     {
-        No* filho = pai ->filhoesquerda;
+        No* filho = pai->filhoesquerda;
         rotacaoesquerda(filho);
         pai->filhoesquerda = filho;
         rotacaodireita(pai);

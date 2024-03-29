@@ -32,7 +32,7 @@ void imprimirposordem(No* Noatual);
  // novos métodos:
 
  void rotacaodireita(No*& tree);
- void rotacaoequerda(No*& tree);
+ void rotacaoesquerda(No*& tree);
  void rotacaoesquerdadireita(No*& tree);
  void rotacaodireitaesquerda(No*& tree);
  void realizarotacao(No*& tree);
